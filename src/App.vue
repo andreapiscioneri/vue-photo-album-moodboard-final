@@ -96,15 +96,26 @@
             {{ currentData.title }}
           </h2>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div v-for="(img, i) in currentData.images" :key="i" class="flip-card" @click="preview = img.src">
+            <div
+              v-for="(img, i) in currentData.images"
+              :key="i"
+              class="flip-card"
+              :class="{ flipped: flippedCards[i] }"
+            >
               <div class="flip-card-inner">
-                <div class="flip-card-front">
+                <div class="flip-card-front" @click="preview = img.src">
                   <img :src="img.src" :alt="img.alt || 'photo'" class="image" />
                 </div>
-                <div class="flip-card-back">
+                <div class="flip-card-back" @click="preview = img.src">
                   <p class="text-zinc-100 text-center p-4">{{ img.description }}</p>
                 </div>
               </div>
+              <button
+                class="mt-2 text-xs bg-zinc-700 px-3 py-1 rounded-full block"
+                @click.stop="toggleFlip(i)"
+              >
+                Description
+              </button>
             </div>
           </div>
         </div>
@@ -154,6 +165,7 @@ const pageIndex = ref(0)
 const preview = ref(null)
 const showMenu = ref(false)
 const isWideScreen = ref(window.innerWidth >= 768)
+const flippedCards = ref([])
 
 const currentData = computed(() => pages.value[pageIndex.value])
 
@@ -190,6 +202,10 @@ const navLinkClass = (isActive) => [
     : 'border-white text-white hover:border-transparent hover:bg-gradient-to-r hover:from-pink-400 hover:via-indigo-500 hover:to-purple-500 hover:text-black'
 ]
 
+const toggleFlip = (index) => {
+  flippedCards.value[index] = !flippedCards.value[index]
+}
+
 onMounted(async () => {
   const chapters = await Promise.all([
     fetch("/chapter0.json").then(res => res.json()),
@@ -203,6 +219,7 @@ onMounted(async () => {
     fetch("/chapter8.json").then(res => res.json())
   ])
   pages.value = chapters
+  flippedCards.value = Array(chapters[0]?.images?.length || 0).fill(false)
 
   if (window.location.hash === "#album") {
     isHome.value = false
@@ -216,7 +233,6 @@ onMounted(async () => {
 </script>
 
 <style scoped>
-/* Animazioni */
 @keyframes slide-in {
   0% { opacity: 0; transform: translateY(40px); }
   100% { opacity: 1; transform: translateY(0); }
@@ -245,10 +261,9 @@ onMounted(async () => {
   opacity: 0;
 }
 
-/* Flip Card */
 .flip-card {
   perspective: 1000px;
-  cursor: zoom-in;
+  cursor: default;
 }
 .flip-card-inner {
   position: relative;
@@ -257,7 +272,7 @@ onMounted(async () => {
   transform-style: preserve-3d;
   transition: transform 0.8s;
 }
-.flip-card:hover .flip-card-inner {
+.flip-card.flipped .flip-card-inner {
   transform: rotateY(-180deg);
 }
 .flip-card-front,
@@ -276,6 +291,7 @@ onMounted(async () => {
   height: 100%;
   object-fit: cover;
   display: block;
+  cursor: zoom-in;
 }
 .flip-card-back {
   background: rgba(20, 20, 20, 0.95);
@@ -285,6 +301,7 @@ onMounted(async () => {
   justify-content: center;
   padding: 1rem;
   text-align: center;
+  cursor: zoom-in;
 }
 blockquote {
   font-style: italic;
