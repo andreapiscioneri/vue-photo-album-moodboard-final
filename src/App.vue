@@ -1,27 +1,42 @@
 <template>
   <div class="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-black text-white px-4 py-10 flex flex-col items-center">
-    
-    <!-- NAVBAR SEMPRE VISIBILE -->
-    <nav class="fixed top-0 left-0 w-full z-50 px-10 md:px-16 py-4 flex justify-between items-center text-white bg-black/30 backdrop-blur-md">
+    <!-- ✅ NAVBAR -->
+    <nav class="fixed top-0 left-0 w-full z-50 px-6 md:px-16 py-4 flex justify-between items-center text-white">
       <img src="/gallery/logo.png" alt="Logo" class="h-10 w-auto cursor-pointer" @click="goHome" />
-      <div class="space-x-4">
-        <a @click="goToChapter(0)" class="px-4 py-2 rounded-full border border-white text-white transition-all duration-300
-                  hover:border-transparent hover:bg-gradient-to-r hover:from-pink-400 hover:via-indigo-500 hover:to-purple-500 hover:text-black cursor-pointer">
-          Album
-        </a>
-        <a href="/about.html" class="px-4 py-2 rounded-full border border-white text-white transition-all duration-300
-                  hover:border-transparent hover:bg-gradient-to-r hover:from-pink-400 hover:via-indigo-500 hover:to-purple-500 hover:text-black">
-          About Me
-        </a>
-        <a href="/contact.html" class="px-4 py-2 rounded-full border border-white text-white transition-all duration-300
-                  hover:border-transparent hover:bg-gradient-to-r hover:from-pink-400 hover:via-indigo-500 hover:to-purple-500 hover:text-black">
-          Contact Me
-        </a>
-      </div>
+
+      <button
+        class="md:hidden text-3xl focus:outline-none"
+        @click="toggleMenu"
+        :aria-expanded="showMenu.toString()"
+        aria-label="Toggle menu"
+      >
+        {{ showMenu ? '✕' : '☰' }}
+      </button>
+
+      <transition name="fade-menu">
+        <div
+          v-show="showMenu || isWideScreen"
+          :class="[
+            'absolute md:static top-16 left-0 w-full md:w-auto flex-col md:flex-row md:flex space-y-4 md:space-y-0 md:space-x-4 bg-black/80 md:bg-transparent px-6 md:px-0 py-4 md:py-0 backdrop-blur-sm md:backdrop-blur-0 rounded-b-xl md:rounded-none text-center md:text-left transition-all duration-300',
+            showMenu || isWideScreen ? 'flex' : 'hidden'
+          ]"
+        >
+          <a @click="goToChapter(0); closeMenu()" :class="navLinkClass(activeLink === 'album')">
+            Album
+          </a>
+          <a href="/about.html" :class="navLinkClass(activeLink === 'about')">
+            About Me
+          </a>
+          <a href="/contact.html" :class="navLinkClass(activeLink === 'contact')">
+            Contact Me
+          </a>
+        </div>
+      </transition>
     </nav>
 
+    <!-- ✅ TRANSITION -->
     <transition name="page-flip" mode="out-in">
-      <!-- HOME PAGE -->
+      <!-- ✅ HOME -->
       <div v-if="isHome" key="home" class="fixed inset-0 w-screen h-screen overflow-hidden">
         <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
           <source src="/gallery/1.mp4" type="video/mp4" />
@@ -40,9 +55,8 @@
         </div>
       </div>
 
-      <!-- PAGINE -->
+      <!-- ✅ PAGINE -->
       <div v-else-if="currentData" :key="pageIndex" class="w-full max-w-6xl mt-24">
-        <!-- TEXT PAGE -->
         <div v-if="currentData.type === 'text'" class="relative w-full">
           <video
             v-if="currentData.video"
@@ -68,8 +82,8 @@
             <button
               @click="goToChapter(1)"
               class="mt-10 px-6 py-3 text-white font-semibold rounded-full transition-all duration-500 ease-in-out
-                    border border-white hover:border-transparent hover:bg-gradient-to-r hover:from-cyan-400 hover:via-purple-500 hover:to-pink-500
-                    hover:shadow-lg hover:text-black fade-in"
+                     border border-white hover:border-transparent hover:bg-gradient-to-r hover:from-cyan-400 hover:via-purple-500 hover:to-pink-500
+                     hover:shadow-lg hover:text-black fade-in"
               style="animation-delay: 1s"
             >
               Vai al Capitolo 1
@@ -77,7 +91,6 @@
           </div>
         </div>
 
-        <!-- GALLERY PAGE -->
         <div v-else-if="currentData.type === 'gallery'" class="w-full mt-16">
           <h2 class="text-5xl md:text-6xl font-extrabold mb-10 text-center text-white animate-title-pop drop-shadow-[0_3px_25px_rgba(255,255,255,0.3)]">
             {{ currentData.title }}
@@ -97,16 +110,15 @@
         </div>
       </div>
 
-      <!-- LOADING -->
-      <div v-else class="text-zinc-500 animate-pulse">Caricamento...</div>
+      <div v-else class="text-zinc-500 animate-pulse mt-32">Caricamento...</div>
     </transition>
 
-    <!-- LIGHTBOX -->
+    <!-- ✅ LIGHTBOX -->
     <div v-if="preview" @click="preview = null" class="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 cursor-zoom-out">
       <img :src="preview" class="max-w-[90vw] max-h-[90vh] rounded shadow-lg" />
     </div>
 
-    <!-- NAVIGATION -->
+    <!-- ✅ NAVIGAZIONE -->
     <div v-if="!isHome" class="mt-10 flex items-center space-x-6">
       <button @click="prevPage" :disabled="pageIndex <= 0" class="flex items-center space-x-2 bg-zinc-800 hover:bg-zinc-700 px-5 py-2 rounded-full disabled:opacity-30 transition">
         <span>⟨</span><span>Indietro</span>
@@ -119,7 +131,7 @@
       </button>
     </div>
 
-    <!-- BACK TO HOME CTA -->
+    <!-- ✅ CTA -->
     <div v-if="!isHome" class="mt-12 mb-6">
       <button
         @click="goHome"
@@ -133,25 +145,50 @@
   </div>
 </template>
 
-
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 
-const isIntro = computed(() => pageIndex.value === 0)
+const isHome = ref(true)
 const pages = ref([])
 const pageIndex = ref(0)
-const isHome = ref(true)
 const preview = ref(null)
+const showMenu = ref(false)
+const isWideScreen = ref(window.innerWidth >= 768)
 
 const currentData = computed(() => pages.value[pageIndex.value])
+
+const activeLink = computed(() => {
+  if (isHome.value) return 'home'
+  if (pageIndex.value === 0) return 'album'
+  return `chapter${pageIndex.value}`
+})
 
 const start = () => { isHome.value = false }
 const goHome = () => {
   pageIndex.value = 0
   isHome.value = true
+  closeMenu()
 }
 const nextPage = () => { if (pageIndex.value < pages.value.length - 1) pageIndex.value++ }
 const prevPage = () => { if (pageIndex.value > 0) pageIndex.value-- }
+
+const toggleMenu = () => { showMenu.value = !showMenu.value }
+const closeMenu = () => { showMenu.value = false }
+
+const goToChapter = (index) => {
+  if (index >= 0 && index < pages.value.length) {
+    pageIndex.value = index
+    isHome.value = false
+    closeMenu()
+  }
+}
+
+const navLinkClass = (isActive) => [
+  'block md:inline px-4 py-2 rounded-full border transition-all duration-300',
+  isActive
+    ? 'bg-gradient-to-r from-pink-400 via-indigo-500 to-purple-500 text-white border-transparent'
+    : 'border-white text-white hover:border-transparent hover:bg-gradient-to-r hover:from-pink-400 hover:via-indigo-500 hover:to-purple-500 hover:text-black'
+]
 
 onMounted(async () => {
   const chapters = await Promise.all([
@@ -166,20 +203,20 @@ onMounted(async () => {
     fetch("/chapter8.json").then(res => res.json())
   ])
   pages.value = chapters
-})
-const goToChapter = (index) => {
-  if (index >= 0 && index < pages.value.length) {
-    pageIndex.value = index
-  }
-}
-  // 🔍 Se l'URL contiene "#album", parti direttamente da chapter0
+
   if (window.location.hash === "#album") {
     isHome.value = false
     pageIndex.value = 0
   }
+
+  window.addEventListener('resize', () => {
+    isWideScreen.value = window.innerWidth >= 768
+  })
+})
 </script>
 
 <style scoped>
+/* Animazioni */
 @keyframes slide-in {
   0% { opacity: 0; transform: translateY(40px); }
   100% { opacity: 1; transform: translateY(0); }
@@ -187,35 +224,25 @@ const goToChapter = (index) => {
 .animate-slide-in {
   animation: slide-in 0.8s ease-out;
 }
-
 @keyframes title-pop {
   0% { opacity: 0; transform: scale(0.85) translateY(40px); }
   100% { opacity: 1; transform: scale(1) translateY(0); }
 }
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.fade-in {
-  animation: fade-in 0.8s ease-out both;
-}
-
 .animate-title-pop {
   animation: title-pop 0.8s ease-out;
 }
-
-.fade-enter-active, .fade-leave-active {
-  transition: all 0.6s ease;
+@keyframes fade-in {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
-.fade-enter-from, .fade-leave-to {
+.animate-fade, .fade-in {
+  animation: fade-in 0.8s ease-out both;
+}
+.fade-menu-enter-active, .fade-menu-leave-active {
+  transition: opacity 0.3s ease;
+}
+.fade-menu-enter-from, .fade-menu-leave-to {
   opacity: 0;
-  transform: translateY(20px) scale(0.98);
 }
 
 /* Flip Card */
@@ -223,7 +250,6 @@ const goToChapter = (index) => {
   perspective: 1000px;
   cursor: zoom-in;
 }
-
 .flip-card-inner {
   position: relative;
   width: 100%;
@@ -231,11 +257,9 @@ const goToChapter = (index) => {
   transform-style: preserve-3d;
   transition: transform 0.8s;
 }
-
 .flip-card:hover .flip-card-inner {
   transform: rotateY(-180deg);
 }
-
 .flip-card-front,
 .flip-card-back {
   position: absolute;
@@ -247,14 +271,12 @@ const goToChapter = (index) => {
   top: 0;
   left: 0;
 }
-
 .flip-card-front img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
-
 .flip-card-back {
   background: rgba(20, 20, 20, 0.95);
   transform: rotateY(180deg);
@@ -264,7 +286,6 @@ const goToChapter = (index) => {
   padding: 1rem;
   text-align: center;
 }
-
 blockquote {
   font-style: italic;
   color: #d1d5db;
