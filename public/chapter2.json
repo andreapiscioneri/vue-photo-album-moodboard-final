@@ -1,0 +1,56 @@
+{
+  "type": "gallery",
+  "title": "Roma",
+  "images": [
+    {
+      "src": "/gallery/roma1.jpeg",
+      "description": "Piazza del Popolo, ore 17:30 – Veduta maestosa della piazza dal Pincio, con cielo parzialmente nuvoloso e luce calda del pomeriggio.",
+      "alt": "Piazza del Popolo"
+    },
+    {
+      "src": "/gallery/roma2.jpeg",
+      "description": "Pantheon, ore 12:00 – La luce di mezzogiorno esalta la facciata antica mentre turisti popolano la piazza.",
+      "alt": "Pantheon"
+    },
+    {
+      "src": "/gallery/roma3.jpeg",
+      "description": "Giardino degli Aranci, ore 14:00 – Atmosfera rilassata sotto i pini con vista panoramica su San Pietro.",
+      "alt": "Giardino degli Aranci"
+    },
+    {
+      "src": "/gallery/roma4.jpeg",
+      "description": "Castel Sant'Angelo, ore 18:15 – Le ombre lunghe del tramonto avvolgono le mura del castello in un’atmosfera suggestiva.",
+      "alt": "Castel Sant'Angelo"
+    },
+    {
+      "src": "/gallery/roma5.jpeg",
+      "description": "Piazza Navona, ore 10:30 – Scorcio della Fontana dei Quattro Fiumi con giochi d’acqua e primo sole mattutino.",
+      "alt": "Piazza Navona"
+    },
+    {
+      "src": "/gallery/roma6.jpeg",
+      "description": "Scalinata di Trinità dei Monti, ore 11:45 – I turisti salgono la celebre scalinata sotto un cielo terso di metà mattina.",
+      "alt": "Trinità dei Monti"
+    },
+    {
+      "src": "/gallery/roma7.jpeg",
+      "description": "Fontana dei Quattro Fiumi, ore 13:15 – Dettagli scultorei in piena luce, con l’acqua che scorre fresca nel cuore della città.",
+      "alt": "Fontana dei Quattro Fiumi"
+    },
+    {
+      "src": "/gallery/roma8.jpeg",
+      "description": "Ponte Sant'Angelo, ore 15:00 – La barca attraversa il Tevere sotto lo sguardo silenzioso delle statue e del cupolone sullo sfondo.",
+      "alt": "Ponte Sant'Angelo"
+    },
+    {
+      "src": "/gallery/roma9.jpeg",
+      "description": "Basilica di San Pietro, ore 16:30 – Una vista frontale imponente in un pomeriggio coperto, con i visitatori che si avvicinano a passo lento.",
+      "alt": "San Pietro"
+    },
+    {
+      "src": "/gallery/roma10.jpeg",
+      "description": "Fontana dei Quattro Fiumi, ore 09:00 – Le statue emergono dalla pietra con i primi riflessi del sole mattutino.",
+      "alt": "Fontana di Piazza Navona"
+    }
+  ]
+}

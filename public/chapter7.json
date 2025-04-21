@@ -1,0 +1,30 @@
+{
+  "title": "Calabria",
+  "type": "gallery",
+  "images": [
+    {
+      "src": "/gallery/Calabria1.jpg",
+      "description": "Copanello, mezzogiorno. Una prospettiva verticale mostra il confine perfetto tra sabbia chiara e mare turchese."
+    },
+    {
+      "src": "/gallery/Calabria2.jpg",
+      "description": "Gerace, mattina. Un borgo arroccato tra i monti regala una vista suggestiva sulla sua fitta trama di tetti e stradine antiche."
+    },
+    {
+      "src": "/gallery/Calabria3.jpg",
+      "description": "Capo Vaticano, pomeriggio. Le strade costiere si snodano sopra scogliere e calette immerse nell’azzurro del Tirreno."
+    },
+    {
+      "src": "/gallery/Calabria4.jpg",
+      "description": "Joppolo, tardo pomeriggio. Una lunga curva abbraccia la costa selvaggia e silenziosa, bagnata da acque cristalline."
+    },
+    {
+      "src": "/gallery/Calabria5.jpg",
+      "description": "Marina di Gioiosa Ionica, tramonto. Una barca dimenticata sulla sabbia attende la prossima alba guardando il mare calmo."
+    },
+    {
+      "src": "/gallery/Calabria6.jpg",
+      "description": "Siderno, sera. Una strada deserta taglia in due un quartiere residenziale dove il tempo sembra essersi fermato."
+    }
+  ]
+}

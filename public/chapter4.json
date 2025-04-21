@@ -1,0 +1,41 @@
+{
+  "type": "gallery",
+  "title": "Bergamo",
+  "images": [
+    {
+      "src": "/gallery/Bergamo1.jpg",
+      "alt": "Centro storico e campo da calcio",
+      "description": "Veduta aerea del centro storico di Bergamo con un campo da calcio in primo piano, scattata alle 17:10 in una giornata invernale."
+    },
+    {
+      "src": "/gallery/Bergamo2.jpg",
+      "alt": "Lago d'Iseo",
+      "description": "Scattata alle 11:30 sulle rive del Lago d'Iseo, con le montagne che abbracciano l'acqua cristallina in una giornata serena."
+    },
+    {
+      "src": "/gallery/Bergamo3.jpg",
+      "alt": "Città Alta",
+      "description": "Veduta panoramica di Città Alta alle 16:45, con le mura venete ben visibili e i tetti caldi al tramonto."
+    },
+    {
+      "src": "/gallery/Bergamo4.jpg",
+      "alt": "Città al tramonto",
+      "description": "Scattata alle 18:20 con luce calda e cielo drammatico sopra Bergamo, la città si estende fino all’orizzonte."
+    },
+    {
+      "src": "/gallery/Bergamo5.jpg",
+      "alt": "Panorama serale",
+      "description": "Panorama verso le valli bergamasche alle 17:30, con le montagne sullo sfondo illuminate dalla luce del tramonto."
+    },
+    {
+      "src": "/gallery/Bergamo7.jpg",
+      "alt": "Santuario tra i boschi",
+      "description": "Scattata alle 10:30, il santuario abbracciato dai colori autunnali nei colli bergamaschi."
+    },
+    {
+      "src": "/gallery/Bergamo8.jpg",
+      "alt": "Lago e montagna",
+      "description": "Scattata alle 09:15, una solitaria anatra nuota sul lago con le Alpi innevate sullo sfondo e cielo coperto."
+    }
+  ]
+}

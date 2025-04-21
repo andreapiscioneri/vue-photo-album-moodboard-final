@@ -1,0 +1,26 @@
+{
+  "type": "gallery",
+  "title": "Liguria",
+  "images": [
+    {
+      "src": "/gallery/Liguria1.jpg",
+      "alt": "Porto Venere",
+      "description": "Porto Venere (SP), 15 luglio 2023, ore 15:30. Barche ormeggiate nel pittoresco porticciolo, con le case color pastello sullo sfondo."
+    },
+    {
+      "src": "/gallery/Liguria2.jpg",
+      "alt": "Manarola",
+      "description": "Manarola (SP), 15 luglio 2023, ore 16:00. Scorcio mozzafiato con bagnanti sulle rocce e case aggrappate alla scogliera."
+    },
+    {
+      "src": "/gallery/Liguria3.jpg",
+      "alt": "Riomaggiore",
+      "description": "Riomaggiore (SP), 16 luglio 2023, ore 12:00. Le case colorate risalgono la collina in un gioco di prospettive e tonalità."
+    },
+    {
+      "src": "/gallery/Liguria4.jpg",
+      "alt": "Barca nel mare ligure",
+      "description": "Costa ligure, 16 luglio 2023, ore 13:45. Una barca ripresa dall’alto taglia il blu profondo del Mar Ligure."
+    }
+  ]
+}

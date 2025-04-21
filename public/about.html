@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me — Andrea</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #e5e7eb;
+      background-color: #0a0a0a;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .background {
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+    }
+
+    .background img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(0);
+    }
+
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: -1;
+    }
+
+    .navbar {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 3rem;
+    }
+
+    .navbar img {
+      height: 36px;
+      cursor: pointer;
+    }
+
+    .nav-buttons {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .nav-buttons a {
+      text-decoration: none;
+      padding: 0.45rem 1.2rem;
+      border: 1px solid white;
+      border-radius: 9999px;
+      color: white;
+      font-weight: 300;
+      transition: all 0.3s ease;
+    }
+
+    .nav-buttons a:hover,
+    .nav-buttons a.active {
+      background: linear-gradient(to right, #ec4899, #6366f1);
+      color: white;
+      border-color: transparent;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 6rem auto 4rem;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      background: linear-gradient(to right, #06b6d4, #8b5cf6, #ec4899);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 2rem;
+    }
+
+    .profile-img {
+      width: 180px;
+      height: auto;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.05);
+    }
+
+    .bio {
+      font-size: 1.125rem;
+      color: #d4d4d8;
+      line-height: 1.8;
+      margin-bottom: 3rem;
+      white-space: pre-line;
+    }
+
+    .tools {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .tool {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      text-align: left;
+    }
+
+    .tool img {
+      width: 120px;
+      border-radius: 0.5rem;
+      object-fit: contain;
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 0.5rem;
+    }
+
+    .tool h3 {
+      margin-bottom: 0.25rem;
+      color: #fff;
+      font-size: 1.25rem;
+    }
+
+    .tool p {
+      color: #cbd5e1;
+    }
+    .background video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(0);
+      z-index: -2;
+}
+
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .tool {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .tool img {
+        width: 80px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="background">
+    <video autoplay loop muted playsinline preload="auto">
+      <source src="/public/gallery/1204911-hd_1920_1080_30fps.mp4" type="video/mp4" />
+      Il tuo browser non supporta i video HTML5.
+    </video>
+  </div>
+  <div class="overlay"></div>  
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="/index.html">
+      <img src="/gallery/logo.png" alt="Logo" />
+    </a>
+    <div class="nav-buttons">
+        <a href="/index.html#album">Album</a>
+      <a href="/about.html">About Me</a>
+      <a href="/contact.html">Contact Me</a>
+    </div>
+  </div>
+
+  <!-- Contenuto principale -->
+  <div class="container">
+    <h1>About Me</h1>
+
+    <!-- Immagine profilo -->
+    <img src="/gallery/io.png" alt="Andrea" class="profile-img" />
+
+    <p class="bio">
+Ciao! Mi chiamo Andrea e questa è la mia pagina personale.
+Qui voglio raccontarti qualcosa in più su di me, su ciò che mi ispira
+e sugli strumenti che uso per creare i miei scatti.
+
+Credo che ogni immagine racconti una storia, e ogni click sia un atto di espressione personale.
+    </p>
+
+    <div class="tools">
+      <div class="tool">
+        <img src="/gallery/2728C006_EOS-2000D-Bk-+-18-55-IS-II_1.png" alt="Canon EOS 2000D" />
+        <div>
+          <h3>Canon EOS 2000D</h3>
+          <p>Una DSLR perfetta per iniziare, sensore da 24.1 MP e connettività Wi-Fi/NFC per scatti rapidi e condivisione istantanea.</p>
+        </div>
+      </div>
+      <div class="tool">
+        <img src="/gallery/0e65b98eaee5cad6f74196e9594b99cd@374*374.png" alt="DJI Mini 3" />
+        <div>
+          <h3>DJI Mini 3 (x2)</h3>
+          <p>Droni leggeri e compatti, capaci di girare video in 4K HDR. Ideali per riprese mozzafiato da angolazioni impossibili.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Evidenziazione automatica link attivo -->
+  <script>
+    const links = document.querySelectorAll('.nav-buttons a')
+    const currentPath = window.location.pathname
+    links.forEach(link => {
+      if (link.getAttribute('href') === currentPath) {
+        link.classList.add('active')
+      }
+    })
+  </script>
+</body>
+</html>

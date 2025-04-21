@@ -1,0 +1,46 @@
+{
+  "title": "Interior",
+  "type": "gallery",
+  "images": [
+    {
+      "src": "/gallery/interior1.jpg",
+      "description": "Scattata a Milano alle 14:00. Un gelato arancione parzialmente sciolto viene tenuto in mano davanti a uno sfondo blu vivido. L'immagine comunica una sensazione di freddo improvviso e distacco."
+    },
+    {
+      "src": "/gallery/interior2.jpg",
+      "description": "Scattata a Milano alle 14:15. Un gelato al cioccolato e vaniglia che si scioglie nella stretta di una mano. L'immagine è potente e trasmette un senso di frustrazione o dolore trattenuto."
+    },
+    {
+      "src": "/gallery/interior3.jpg",
+      "description": "Scattata a Pavia alle 11:30. Un uomo con felpa bianca lancia una chiave verso l’osservatore, visto attraverso una serratura. Simboleggia fiducia, apertura o la consegna di un segreto."
+    },
+    {
+      "src": "/gallery/interior4.jpg",
+      "description": "Scattata al Parco del Ticino alle 17:45. Un uomo apre la propria camicia, rivelando un paesaggio naturale al suo interno. Forte metafora visiva di trasparenza, introspezione e connessione con la natura."
+    },
+    {
+      "src": "/gallery/interior5.jpg",
+      "description": "Scattata a Lodi alle 16:00. Un cartellone pubblicitario in una piazza mostra l'immagine del gelato che si scioglie nella mano. L'ambientazione urbana contrasta con il messaggio emotivo dell'immagine."
+    },
+    {
+      "src": "/gallery/interior6.jpg",
+      "description": "Scattata a Lodi alle 16:10. Una grande bandiera con l’immagine del gelato appeso a una finestra di un edificio storico. Rappresenta l'inserimento di emozioni moderne in un contesto classico."
+    },
+    {
+      "src": "/gallery/interior7.jpg",
+      "description": "Scattata a Cremona alle 10:20. Un guanto gonfiato simile a una mano da cui spuntano dita a forma di mani in segni diversi. Un gioco surreale sull'espressività e la comunicazione."
+    },
+    {
+      "src": "/gallery/interior8.jpg",
+      "description": "Scattata a Cremona alle 10:30. Un mazzo di fiori rossi che sboccia da un guanto medico gonfiato. Mescola fragilità e forza, natura e artificio."
+    },
+    {
+      "src": "/gallery/interior9.jpg",
+      "description": "Scattata a Cremona alle 10:40. Foglie verdi che crescono da un guanto gonfiato. Simbolo di speranza, crescita e resilienza in un contesto sintetico."
+    },
+    {
+      "src": "/gallery/interior10.jpg",
+      "description": "Scattata a Piacenza alle 13:00. Una pera tagliata a fette sospese in aria con gocce che cadono, su sfondo verde. Evoca freschezza, leggerezza e vulnerabilità."
+    }
+  ]
+}

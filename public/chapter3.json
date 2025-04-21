@@ -1,0 +1,46 @@
+{
+  "type": "gallery",
+  "title": "Milano",
+  "images": [
+    {
+      "src": "/gallery/milano1.png",
+      "alt": "Stadio San Siro",
+      "description": "Stadio San Siro, ore 18:45 – Scatto al tramonto con vista panoramica dello stadio e dello skyline milanese sullo sfondo."
+    },
+    {
+      "src": "/gallery/milano2.png",
+      "alt": "Duomo di Milano",
+      "description": "Duomo di Milano, ore 09:15 – La luce del mattino illumina le guglie gotiche contro un cielo terso."
+    },
+    {
+      "src": "/gallery/milano3.png",
+      "alt": "Piazza del Duomo",
+      "description": "Piazza del Duomo, ore 11:00 – La base del Duomo in un giorno affollato di visitatori, con giochi di luce e ombra."
+    },
+    {
+      "src": "/gallery/milano4.png",
+      "alt": "Galleria Vittorio Emanuele II",
+      "description": "Galleria Vittorio Emanuele II, ore 14:00 – Interno della galleria con luce naturale filtrata dalla cupola in vetro."
+    },
+    {
+      "src": "/gallery/milano5.png",
+      "alt": "Via del centro storico (BN)",
+      "description": "Centro storico, ore 08:30 – Vicolo milanese in bianco e nero con biciclette parcheggiate e luce morbida del mattino."
+    },
+    {
+      "src": "/gallery/milano6.png",
+      "alt": "Via del centro storico",
+      "description": "Centro storico, ore 08:30 – La stessa scena in versione a colori, con edifici storici e atmosfera tranquilla."
+    },
+    {
+      "src": "/gallery/milano7.png",
+      "alt": "Corso Buenos Aires di notte",
+      "description": "Corso Buenos Aires, ore 20:10 – Scatto serale con tram, biciclette e passanti sotto le luci cittadine."
+    },
+    {
+      "src": "/gallery/milano8.png",
+      "alt": "Piazza Duomo al tramonto",
+      "description": "Piazza Duomo, ore 17:45 – Cielo color pesca e piccioni in volo creano un momento magico tra le architetture storiche."
+    }
+  ]
+}

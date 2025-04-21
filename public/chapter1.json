@@ -1,0 +1,61 @@
+{
+  "type": "gallery",
+  "title": "Francia",
+  "images": [
+    {
+      "src": "/gallery/Francia1.jpeg",
+      "alt": "Tramonto",
+      "description": "Scattata alle 19:45 nei pressi di Montmartre, Parigi. Il cielo tinto d’oro chiude una giornata d’estate tra i vicoli romantici della capitale."
+    },
+    {
+      "src": "/gallery/Francia2.jpeg",
+      "alt": "Lago",
+      "description": "Scattata alle 16:20 presso il Lago di Annecy. Le acque limpide riflettono le cime alpine in un pomeriggio d’autunno."
+    },
+    {
+      "src": "/gallery/Francia3.jpeg",
+      "alt": "Bosco",
+      "description": "Scattata alle 10:00 del mattino nel cuore della Foresta di Fontainebleau, immersa nella quiete e nel verde."
+    },
+    {
+      "src": "/gallery/Francia4.jpeg",
+      "alt": "Bosco",
+      "description": "Scattata alle 11:15 tra i sentieri del Parco Nazionale dei Vosgi, con luci tenui filtrate tra gli alberi."
+    },
+    {
+      "src": "/gallery/Francia5.jpeg",
+      "alt": "Bosco",
+      "description": "Scattata alle 09:50 a ridosso del confine svizzero, nelle zone boschive intorno a Saint-Louis."
+    },
+    {
+      "src": "/gallery/Francia6.jpeg",
+      "alt": "Colmar",
+      "description": "Scattata alle 13:30 nel centro storico di Colmar, davanti al ristorante 'La Cour des Anges'."
+    },
+    {
+      "src": "/gallery/Francia7.jpeg",
+      "alt": "Chiesa gotica",
+      "description": "Scattata alle 15:45 presso la collegiata di San Martino a Colmar, con luce pomeridiana filtrata tra gli alberi."
+    },
+    {
+      "src": "/gallery/Francia8.jpeg",
+      "alt": "Tram Strasburgo",
+      "description": "Scattata alle 18:50 lungo Avenue de la Marseillaise, Strasburgo, con le luci del tram serali riflettenti."
+    },
+    {
+      "src": "/gallery/Francia9.jpeg",
+      "alt": "Centro Colmar",
+      "description": "Scattata alle 17:00 tra le vie decorate di Colmar, durante i mercatini natalizi."
+    },
+    {
+      "src": "/gallery/Francia10.jpeg",
+      "alt": "Strasburgo al tramonto",
+      "description": "Scattata alle 19:15 dalla cima della Cattedrale di Strasburgo, vista panoramica al tramonto."
+    },
+    {
+      "src": "/gallery/Francia11.jpeg",
+      "alt": "Parco Strasburgo",
+      "description": "Scattata alle 16:20 nel Parco della Citadelle a Strasburgo, con colori autunnali brillanti nel pomeriggio."
+    }
+  ]
+}

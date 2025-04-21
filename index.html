@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Album Fotografico</title>
+
+    <!-- ✅ FAVICON -->
+    <link rel="icon" type="image/png" href="/gallery/logo.png" />
+
+    <!-- ✅ LOADER STYLE -->
+    <style>
+      #loader {
+        position: fixed;
+        inset: 0;
+        background: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+      }
+
+      #loader img {
+        height: 80px;
+        width: auto;
+        animation: fadeIn 1.2s ease-in-out infinite alternate;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0.4;
+          transform: scale(0.95);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-zinc-900 text-white">
+    <!-- ✅ LOADER -->
+    <div id="loader">
+      <img src="/gallery/logo.png" alt="Loading..." />
+    </div>
+
+    <!-- ✅ APP VUE -->
+    <div id="app" style="display: none;"></div>
+
+    <script type="module">
+      // Importa Vue app
+      import('/src/main.js').then(() => {
+        // Attende almeno 2 secondi prima di mostrare l'app
+        setTimeout(() => {
+          document.getElementById('loader').style.display = 'none'
+          document.getElementById('app').style.display = 'block'
+        }, 2000)
+      })
+    </script>    
+  </body>
+</html>

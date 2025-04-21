@@ -1,0 +1,38 @@
+{
+  "type": "gallery",
+  "title": "Crespi d'Adda",
+  "images": [
+    {
+      "src": "/gallery/Crespi1.jpg",
+      "description": "Monumento ai Caduti di Crespi d'Adda - Ore 13:00. Uno dei simboli storici del villaggio operaio, costruito per commemorare i caduti della Grande Guerra, incorniciato da alberi secolari."
+    },
+    {
+      "src": "/gallery/Crespi2.jpg",
+      "description": "Camino della Fabbrica - Ore 18:30. Il profilo iconico dell'antico camino, cuore della fabbrica tessile, spicca contro il cielo al tramonto, ricordando l’epoca industriale di Crespi."
+    },
+    {
+      "src": "/gallery/Crespi3.jpg",
+      "description": "Monumento ai Caduti - Vista laterale - Ore 19:00. Dettaglio scultoreo e architettonico del monumento, in luce radente serale, che esalta le forme austere dell'opera."
+    },
+    {
+      "src": "/gallery/Crespi4.jpg",
+      "description": "Chiesa di Crespi d’Adda - Ore 20:00. Il sole al tramonto accarezza le pareti della chiesa neorinascimentale, punto focale spirituale e visivo del villaggio."
+    },
+    {
+      "src": "/gallery/Crespi5.jpg",
+      "description": "Chiesa di Crespi d’Adda di notte - Ore 22:30. Illuminata dalla luce dei lampioni e dal cielo stellato, la chiesa trasmette un’atmosfera silenziosa e solenne."
+    },
+    {
+      "src": "/gallery/Crespi6.jpg",
+      "description": "Viale delle Case Operaie - Ore 20:30. Una veduta aerea delle storiche abitazioni costruite per gli operai, testimonianza concreta della visione sociale della famiglia Crespi."
+    },
+    {
+      "src": "/gallery/Crespi7.jpg",
+      "description": "Fiume Adda al tramonto - Ore 19:15. La superficie dell’acqua riflette le nuvole e la vegetazione, creando un paesaggio pittoresco e sereno che circonda Crespi d’Adda."
+    },
+    {
+      "src": "/gallery/Crespi8.jpg",
+      "description": "Panorama dal fiume verso Crespi - Ore 19:30. Lungo la riva si estendono la fabbrica e il villaggio, unici nel loro genere e perfettamente inseriti nel paesaggio naturale."
+    }
+  ]
+}
