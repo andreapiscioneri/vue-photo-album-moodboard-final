@@ -47,8 +47,13 @@
     }
 
     .navbar img {
-      height: 36px;
+      height: 40px;
       cursor: pointer;
+      transition: filter 0.3s ease;
+    }
+
+    .navbar img:hover {
+      filter: brightness(1.2);
     }
 
     .menu-toggle {
@@ -147,7 +152,6 @@
       color: #cbd5e1;
     }
 
-    /* Mobile menu con fade */
     .nav-buttons.mobile {
       opacity: 0;
       visibility: hidden;
@@ -201,7 +205,7 @@
         display: block;
       }
 
-      .nav-buttons {
+      .nav-buttons.desktop {
         display: none;
       }
 
@@ -219,7 +223,7 @@
         display: none !important;
       }
 
-      .nav-buttons {
+      .nav-buttons.desktop {
         display: flex !important;
       }
     }
@@ -237,6 +241,7 @@
   </style>
 </head>
 <body>
+  <!-- Background video -->
   <div class="background">
     <video autoplay muted loop playsinline preload="auto">
       <source src="/gallery/bgabout.mp4" type="video/mp4" />
@@ -246,28 +251,28 @@
 
   <!-- Navbar -->
   <div class="navbar">
-    <a href="/index.html">
+    <a href="/">
       <img src="/gallery/logo.png" alt="Logo" />
     </a>
     <button class="menu-toggle" aria-label="Menu" id="menuToggle">☰</button>
+
+    <!-- Mobile nav -->
     <div class="nav-buttons mobile" id="mobileMenu">
-      <a href="/index.html#album">Album</a>
       <a href="/about.html">About Me</a>
       <a href="/contact.html">Contact Me</a>
     </div>
+
+    <!-- Desktop nav -->
     <div class="nav-buttons desktop">
-      <a href="/index.html#album">Album</a>
       <a href="/about.html">About Me</a>
       <a href="/contact.html">Contact Me</a>
     </div>
   </div>
 
-  <!-- Contenuto principale -->
+  <!-- Contenuto -->
   <div class="container">
     <h1>About Me</h1>
-
     <img src="/gallery/io.png" alt="Andrea" class="profile-img" />
-
     <p class="bio">
 Ciao! Mi chiamo Andrea e questa è la mia pagina personale.
 Qui voglio raccontarti qualcosa in più su di me, su ciò che mi ispira
@@ -294,7 +299,7 @@ Credo che ogni immagine racconti una storia, e ogni click sia un atto di espress
     </div>
   </div>
 
-  <!-- Script -->
+  <!-- Script per toggle + attivo -->
   <script>
     const toggleButton = document.getElementById("menuToggle");
     const mobileMenu = document.getElementById("mobileMenu");
@@ -311,11 +316,11 @@ Credo che ogni immagine racconti una storia, e ogni click sia un atto di espress
       });
     });
 
-    // evidenzia link attivo
+    // Evidenzia il link attivo
     const links = document.querySelectorAll('.nav-buttons a');
     const currentPath = window.location.pathname;
     links.forEach(link => {
-      if (link.getAttribute('href') === currentPath || link.href.includes(currentPath)) {
+      if (link.getAttribute('href') === currentPath) {
         link.classList.add('active');
       }
     });

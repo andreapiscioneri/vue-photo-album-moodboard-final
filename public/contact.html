@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact me</title>
+  <title>Contact Me</title>
   <link rel="icon" href="/gallery/logo.png" type="image/png" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
       font-family: 'Inter', sans-serif;
       color: #e5e7eb;
@@ -47,8 +48,13 @@
     }
 
     .navbar img {
-      height: 36px;
+      height: 40px;
       cursor: pointer;
+      transition: filter 0.3s ease;
+    }
+
+    .navbar img:hover {
+      filter: brightness(1.2);
     }
 
     .menu-toggle {
@@ -103,19 +109,6 @@
       left: 0;
       z-index: 15;
     }
-    .nav-buttons.mobile a {
-  display: block;
-  width: 90%;
-  max-width: 340px;
-  margin: 0 auto;
-  padding: 0.75rem 1.5rem;
-  border: 1px solid white;
-  border-radius: 9999px;
-  color: white;
-  font-weight: 600;
-  text-align: center;
-  transition: all 0.3s ease;
-}
 
     .nav-buttons.mobile.show {
       opacity: 1;
@@ -124,12 +117,32 @@
       transform: translateY(0);
     }
 
+    .nav-buttons.mobile a {
+      display: block;
+      width: 90%;
+      max-width: 340px;
+      margin: 0 auto;
+      padding: 0.75rem 1.5rem;
+      border: 1px solid white;
+      border-radius: 9999px;
+      color: white;
+      font-weight: 600;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .nav-buttons.mobile a:hover {
+      background: linear-gradient(to right, #ec4899, #6366f1);
+      color: black;
+      border-color: transparent;
+    }
+
     @media (max-width: 1024px) {
       .menu-toggle {
         display: block;
       }
 
-      .nav-buttons {
+      .nav-buttons.desktop {
         display: none;
       }
 
@@ -147,7 +160,7 @@
         display: none !important;
       }
 
-      .nav-buttons {
+      .nav-buttons.desktop {
         display: flex !important;
       }
     }
@@ -293,17 +306,19 @@
 
   <!-- Navbar -->
   <div class="navbar">
-    <a href="/index.html">
+    <a href="/">
       <img src="/gallery/logo.png" alt="Logo" />
     </a>
-    <button class="menu-toggle" aria-label="Menu" id="menuToggle">☰</button>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+
+    <!-- Mobile menu -->
     <div class="nav-buttons mobile" id="mobileMenu">
-      <a href="/index.html#album">Album</a>
       <a href="/about.html">About Me</a>
       <a href="/contact.html">Contact Me</a>
     </div>
+
+    <!-- Desktop menu -->
     <div class="nav-buttons desktop">
-      <a href="/index.html#album">Album</a>
       <a href="/about.html">About Me</a>
       <a href="/contact.html">Contact Me</a>
     </div>
@@ -327,18 +342,10 @@
     <div class="section">
       <p><strong>Seguimi su:</strong></p>
       <div class="social-icons">
-        <a href="https://www.instagram.com/andreapiscioneri/" target="_blank">
-          <img src="/gallery/ig.png" alt="Instagram" />
-        </a>
-        <a href="https://www.facebook.com/profile.php?id=100076286341248" target="_blank">
-          <img src="/gallery/fb.png" alt="Facebook" />
-        </a>
-        <a href="https://www.linkedin.com/in/andrea-piscioneri/" target="_blank">
-          <img src="/gallery/link.png" alt="LinkedIn" />
-        </a>
-        <a href="https://www.behance.net/andreapiscioneri" target="_blank">
-          <img src="/gallery/behance.png" alt="Behance" />
-        </a>
+        <a href="https://www.instagram.com/andreapiscioneri/" target="_blank"><img src="/gallery/ig.png" alt="Instagram" /></a>
+        <a href="https://www.facebook.com/profile.php?id=100076286341248" target="_blank"><img src="/gallery/fb.png" alt="Facebook" /></a>
+        <a href="https://www.linkedin.com/in/andrea-piscioneri/" target="_blank"><img src="/gallery/link.png" alt="LinkedIn" /></a>
+        <a href="https://www.behance.net/andreapiscioneri" target="_blank"><img src="/gallery/behance.png" alt="Behance" /></a>
       </div>
     </div>
 
@@ -376,11 +383,11 @@
       });
     });
 
-    // evidenzia link attivo
+    // Evidenzia link attivo
     const links = document.querySelectorAll('.nav-buttons a');
     const currentPath = window.location.pathname;
     links.forEach(link => {
-      if (link.getAttribute('href') === currentPath || link.href.includes(currentPath)) {
+      if (link.getAttribute('href') === currentPath) {
         link.classList.add('active');
       }
     });
