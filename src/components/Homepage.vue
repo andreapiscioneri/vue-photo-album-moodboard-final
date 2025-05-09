@@ -12,7 +12,7 @@
   <!-- Contenuto centrale -->
   <div class="relative z-20 flex flex-col items-center justify-center px-6 space-y-6 max-w-3xl">
     <h1 class="text-5xl font-extrabold bg-gradient-to-r from-pink-400 via-indigo-500 to-purple-500 bg-clip-text text-transparent">
-      Inizia il tuo Viaggio Fotografico
+      Inizia il tuo Viaggio fotografico
     </h1>
     <p class="text-white text-lg leading-relaxed">
       Esplora, crea e condividi il tuo album personale. Ispirato dal lavoro di Andrea Piscioneri, ogni scatto racconta una storia.
