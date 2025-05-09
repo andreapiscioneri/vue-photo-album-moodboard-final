@@ -83,7 +83,7 @@
     <!-- Colonna destra: immagine di sfondo -->
     <div
       class="relative w-full h-full min-h-[300px] bg-cover bg-center"
-      style="background-image: url('/public/gallery/Francia2.jpeg');"
+      style="background-image: url('/gallery/Francia2.jpeg');"
     >
       <div class="absolute inset-0 bg-black/30"></div>
     </div>
@@ -109,7 +109,7 @@ Le sue immagini ispirano chiunque desideri raccontarsi attraverso lo sguardo del
     <!-- Colonna destra: immagine di sfondo -->
     <div
       class="relative w-full h-full min-h-[300px] bg-cover bg-center"
-      style="background-image: url('/public/gallery/1.jpg');"
+      style="background-image: url('/gallery/1.jpg');"
     >
       <div class="absolute inset-0 bg-black/30"></div>
     </div>
