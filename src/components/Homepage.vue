@@ -96,7 +96,6 @@
     <div class="z-10 bg-zinc-900/90 backdrop-blur px-6 py-10 flex flex-col justify-center text-center md:text-left space-y-4">
 <a
   href="/andrea"
-  target="_blank"
   rel="noopener"
   class="text-indigo-400 hover:underline text-2xl font-semibold"
 >
@@ -153,7 +152,6 @@ Le sue immagini ispirano chiunque desideri raccontarsi attraverso lo sguardo del
   </p>
 <a
   href="/Login"
-  target="_blank"
   rel="noopener"
   class="inline-block px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-full transition"
 >
