@@ -94,13 +94,10 @@
     
     <!-- Colonna sinistra: testo -->
     <div class="z-10 bg-zinc-900/90 backdrop-blur px-6 py-10 flex flex-col justify-center text-center md:text-left space-y-4">
-<a
-  href="/andrea"
-  rel="noopener"
-  class="text-indigo-400 hover:underline text-2xl font-semibold"
->
+<router-link to="/andrea" class="text-indigo-400 hover:underline text-2xl font-semibold">
   📸 Andrea Piscioneri
-</a>
+</router-link>
+
 
       <p class="text-zinc-400 text-lg leading-relaxed">
         Fotografo documentarista italiano, Andrea cattura l’essenza di luoghi, volti e storie con uno stile intimista e cinematografico.
@@ -150,13 +147,10 @@ Le sue immagini ispirano chiunque desideri raccontarsi attraverso lo sguardo del
   <p class="text-zinc-400 mb-8">
     Accedi per creare il tuo album personalizzato e iniziare a caricare le tue foto.
   </p>
-<a
-  href="/Login"
-  rel="noopener"
-  class="inline-block px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-full transition"
->
+<router-link to="/Login" class="inline-block px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-full transition">
   🔐 Vai al Login
-</a>
+</router-link>
+
 
 
 </section>
