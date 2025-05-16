@@ -15,7 +15,7 @@
       Inizia il tuo Viaggio fotografico
     </h1>
     <p class="text-white text-lg leading-relaxed">
-      Esplora, crea e condividi il tuo album personale. Ispirato dal lavoro di Andrea Piscioneri, ogni scatto racconta una storia.
+      Esplora, crea e condividi il tuo album personale. Ogni scatto racconta una storia.
     </p>
     <button
       @click="scrollToSection('create')"
@@ -52,12 +52,41 @@
 
 <div class="min-h-screen bg-[#000] text-white px-4 py-10 flex flex-col items-center space-y-20">
     <!-- ✅ HERO -->
+    <section class="w-full max-w-6xl mx-auto py-20 px-4">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+    <!-- Testo a sinistra -->
+    <div class="space-y-6 text-left">
+      <h2 class="text-4xl font-extrabold bg-gradient-to-r from-pink-400 via-indigo-500 to-purple-500 bg-clip-text text-transparent">
+        Un servizio su misura per la tua storia
+      </h2>
+      <p class="text-zinc-300 text-lg leading-relaxed">
+        Il nostro servizio ti guida nella creazione di un album fotografico unico. 
+        Ogni utente può selezionare, caricare e descrivere le proprie immagini attraverso un’interfaccia semplice e intuitiva. 
+        Ogni scatto non è solo un'immagine, ma una memoria che prende vita con le tue parole. 
+        Il risultato? Un racconto visuale autentico, personalizzato e pronto da condividere o stampare.
+      </p>
+      <p class="text-zinc-400 text-base leading-relaxed">
+        Che tu sia un fotografo appassionato o semplicemente desideri conservare i tuoi ricordi più preziosi, 
+        P-Splash ti offre gli strumenti per creare un viaggio visivo coinvolgente, dove ogni pagina parla di te.
+      </p>
+    </div>
+
+    <!-- Immagine a destra -->
+    <div class="relative w-full h-[350px] md:h-[450px] rounded-xl overflow-hidden shadow-lg">
+      <img 
+        src="/gallery/album_preview.jpg" 
+        alt="Anteprima album fotografico"
+        class="w-full h-full object-cover"
+      />
+    </div>
+  </div>
+</section>
     <section class="text-center space-y-6 max-w-3xl">
       <h1 class="text-5xl font-extrabold bg-gradient-to-r from-pink-400 via-indigo-500 to-purple-500 bg-clip-text text-transparent animate-slide-in">
        Chi ci ha gia scelto
       </h1>
       <p class="text-zinc-200 text-lg leading-relaxed">
-        Esplora, crea e condividi il tuo album personale. Ispirato dal lavoro di Andrea Piscioneri, ogni scatto racconta una storia.
+        Esplora, crea e condividi il tuo album personale. Ispirato dal lavoro di P-Splash, ogni scatto racconta una storia.
       </p>
     </section>
 <section class="w-full max-w-6xl mx-auto py-10" id="andrea">
@@ -209,12 +238,12 @@ Le sue immagini ispirano chiunque desideri raccontarsi attraverso lo sguardo del
     <!-- Logo e nome -->
     <div class="flex items-center space-x-3">
       <img src="/gallery/logo.png" alt="Logo" class="h-8 w-auto" />
-      <span class="text-white font-semibold text-lg">Andrea Piscioneri</span>
+      <span class="text-white font-semibold text-lg"> P-Splash</span>
     </div>
 
     <!-- Credits -->
     <div class="text-sm text-zinc-500">
-      © 2025 Tutti i diritti riservati. Realizzato da Andrea Piscioneri.
+      © 2025 Tutti i diritti riservati. Realizzato da P-Splash.
     </div>
   </div>
 </footer>

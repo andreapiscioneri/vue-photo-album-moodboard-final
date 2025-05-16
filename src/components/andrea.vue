@@ -32,9 +32,10 @@
         </video>
         <div class="absolute inset-0 bg-black/60 backdrop-blur-sm z-10"></div>
         <div class="absolute inset-0 z-20 flex flex-col items-center justify-center text-center space-y-6 px-6">
-          <h1 class="text-5xl font-extrabold bg-gradient-to-r from-pink-400 via-indigo-500 to-purple-500 bg-clip-text text-transparent animate-slide-in">
-            Andrea Piscioneri
-          </h1>
+        <img src="/gallery/logoAP.png" alt="Logo" class="h-10 w-auto animate-slide-in" />
+        <h1 class="text-5xl font-extrabold bg-gradient-to-r from-pink-400 via-indigo-500 to-purple-500 bg-clip-text text-transparent animate-slide-in">
+          Andrea Piscioneri
+        </h1>
           <p class="text-zinc-200 text-lg max-w-2xl leading-relaxed">
             Un viaggio visivo tra luoghi, dettagli e atmosfere. Sfoglia le pagine e lasciati ispirare dai miei scatti personali.
           </p>
