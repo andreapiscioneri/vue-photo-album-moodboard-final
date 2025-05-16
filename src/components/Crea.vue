@@ -1,4 +1,26 @@
 <template>
+    <!-- Navbar in alto -->
+<div class="absolute top-0 left-0 w-full z-30 px-6 py-6 flex justify-between items-center">
+  <router-link to="/" class="cursor-pointer">
+    <img src="/gallery/logo.png" alt="Logo" class="h-10" />
+  </router-link>
+
+  <div class="flex space-x-4">
+    <a
+      href="/about.html"
+      class="border border-white px-4 py-2 rounded-full text-white transition hover:font-semibold hover:text-white hover:bg-gradient-to-r hover:from-pink-400 hover:via-indigo-500 hover:to-purple-500 hover:border-transparent"
+    >
+      About Me
+    </a>
+
+    <a
+      href="/contact.html"
+      class="border border-white px-4 py-2 rounded-full text-white transition hover:font-semibold hover:text-white hover:bg-gradient-to-r hover:from-pink-400 hover:via-indigo-500 hover:to-purple-500 hover:border-transparent"
+    >
+      Contact Me
+    </a>
+  </div>
+</div>
   <div class="min-h-screen bg-[#121212] text-white px-6 py-10">
     <h1 class="text-4xl font-bold mb-8 text-center">📸 Crea il tuo Album Fotografico</h1>
 
